@@ -1,0 +1,337 @@
+/*
+ Filename: fontAwesome.css
+ Written by: Jullien McLean (JLJM)
+ Purpose: The css to style index.html
+ Date: 2 April, 2020
+ Modification History:  April, 2020
+ Original Build
+*/
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(/assets/fonts/Lato.woff2) format('woff2'),
+       url(/assets/fonts/Lato.woff) format('woff');
+}
+
+@font-face {
+	font-family: "Harabara Bold";
+	src: url("css/fonts/Harabara.eot");
+	src:
+	url("css/fonts/Harabara.woff") format("woff"),
+	url("css/fonts/Harabara.otf") format("opentype"),
+	url("css/fonts/Harabara.svg#filename") format("svg");
+}
+
+@font-face {
+  font-family: 'Graublau Web';
+  src:  url('GraublauWeb.eot?') format('eot'), 
+        url('GraublauWeb.woff') format('woff'), 
+        url('GraublauWeb.ttf') format('truetype');
+}
+
+#navigation {
+	font-family: 'MyWebFont', Impact, sans-serif;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 25%;
+	width: 100px;
+	background-color: #111;
+	color: #ffffff;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+#navigation a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+#navigation:hover {
+	color: #818181;
+}
+
+#dropDownMenu {
+	display: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+	#navigation {
+		display: none;
+	}
+	
+	#dropDownMenu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 29.7%;
+		width: 100px;
+		background-color: #111;
+		color: #ffffff;
+		align-items: center;
+		justify-content: center;
+		overflow-x: hidden;
+		transition: 0.5s;
+		display: inherit;
+	}
+	
+	.dropbtn {
+		background-color: gray;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}	
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: gray;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+		color: #000000;
+	}
+
+	.dropdown:hover .dropbtn {
+		background-color: black;
+	}
+}
+
+.site-footer {
+	position:fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #838383;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.social-wrapper {
+	text-align: center;
+}
+
+.social-wrapper ul li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.twitter-icon,.facebook-icon, .instagram-icon, .linkedin-icon,.googleplus-icon, .youtube-icon, .foursquare-icon{
+	margin-top: .625em;
+	width: 40px;
+	height: 40px;
+	opacity: .6;
+	filter: alpha(opacity=60); 
+	border-radius: 25px;
+}
+
+.twitter-icon:hover, .facebook-icon:hover, .instagram-icon:hover, .linkedin-icon:hover, .googleplus-icon:hover, .youtube-icon:hover, .foursquare-icon:hover {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
+@media screen and (max-width: 600px) {
+	.social-wrapper {
+		vertical-align: middle;
+	}
+
+	#social-wrapper ul{
+		vertical-align: middle;
+	}
+
+	.social-wrapper ul li {
+		display: block;
+		margin: 0 5px;
+		list-style-type: none;
+}
+
+}
+
+#home {
+	font-family: 'Lato', sans-serif;
+}
+
+#about {
+	font-family: 'Harabara Bold', Georgia;
+}
+
+#contact {
+	font-family: "Grablau Web", Palatino Linotype, italic;
+}
+	
+	
+/*
+	#navigation{
+		float: right;
+		border-right:none;
+		vertical-align: middle;
+		text-align:center;
+	}
+
+	#navigation ul{
+		list-style: none;
+		float: right;
+		display: inline-block;
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		vertical-align: middle;
+		text-align:center;
+
+	}
+
+	#navigation li{
+		float: right;
+		vertical-align: middle;
+	}
+
+	#navigation li a {
+		display:block;
+		border-right:none;
+		margin-left: 0;
+	}
+
+	#listOne{
+		position:fixed; right:7px;
+		margin: 10px 0;
+	}
+
+	#listTwo{
+		position:fixed; right:7px;
+	}
+
+	#listThree{
+		position:fixed; right:7px;
+	}
+
+	#listFour{
+		position:fixed; right:7px;
+	}
+
+	.footer, #main:after {
+		height: 300px;
+	}
+
+	.footer {
+		background-color: black;
+		color: white;
+		text-align: left;
+	}
+
+
+	.footer .listItems {
+		vertical-align: top;
+		text-align: left;
+	}
+}
+
+#main {
+	min-height: 100%;
+	margin-bottom: -300px; 
+}
+#main:after {
+	content: "";
+	display: block;
+}
+
+.boxes {
+	height: 200px;
+	width: 100%;
+	background-color: red;
+	color: #ffffff;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+	.boxes{
+		width: 200px;
+		border-radius: 8px;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	#flexin{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.boxes{
+		height: 100px;
+		width: 100px;
+		border-radius: 8px;
+		box-sizing: border-box;
+		align-content: space-between;
+		flex-basis: 34%;
+	}
+}
+
+
+.footer, #main:after {
+	height: 300px; 
+}
+
+.footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+	.footer{
+		height: 400px;
+	}
+}
+
+
+.footer .listItems {
+	margin: 0;
+    vertical-align: middle;
+	line-height: 70px;
+}
+*/
